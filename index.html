@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <title></title>
+</head>
+<body>
+    <pre-loader>
+        Ждемс
+        <item>.</item><item style="color: #00000000;">.</item><item style="color: #00000000;">.</item>
+        <script>
+            items = document.querySelectorAll('pre-loader item')
+            document.querySelector('pre-loader').classList = 'word'
+            step = 2
+            loadInterval = setInterval(() => {
+                if (step == 4) step = 0
+                for (var item = 0; item < 3; item++){ if (item < step) {items[item].style = 'color: #fff;'} else {items[item].style = 'color: #00000000;'}}
+                step += 1
+            }, 400)
+        </script>
+    </pre-loader>
+    <video muted disablepictureinpicture><source src="src/pre-load.mp4" type="video/mp4"></video>
+</body>
+</html>
